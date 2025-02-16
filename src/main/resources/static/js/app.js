@@ -22,7 +22,7 @@ const totalQuestionsElement = document.getElementById('total-questions');
 const correctAnswersElement = document.getElementById('correct-answers');
 const incorrectAnswersElement = document.getElementById('incorrect-answers');
 const scorePercentageElement = document.getElementById('score-percentage');
-const questionsSummary = document.getElementById('questions-summary');
+//const questionsSummary = document.getElementById('questions-summary');
 
 // Event Listeners
 startButton.addEventListener('click', startQuiz);
@@ -205,7 +205,7 @@ function displayResults(results) {
     const percentage = Math.round((results.correctAnswers / results.totalQuestions) * 100);
     scorePercentageElement.textContent = `${percentage}%`;
 
-    questionsSummary.innerHTML = '';
+    //questionsSummary.innerHTML = '';
 
     results.questionResults.forEach((result, index) => {
         const questionDiv = document.createElement('div');
@@ -239,7 +239,7 @@ function displayResults(results) {
             questionDiv.appendChild(answerDiv);
         });
 
-        questionsSummary.appendChild(questionDiv);
+        //questionsSummary.appendChild(questionDiv);
     });
 }
 
