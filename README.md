@@ -54,6 +54,9 @@ quiz-app/
 ```
 
 ## Application UI 
+![Quiz UI](Images/1.png)
+![Quiz UI](Images/2.png)
+![Quiz UI](Images/3.png)
 
 ## Setup Instructions
 
