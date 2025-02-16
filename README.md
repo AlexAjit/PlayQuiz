@@ -53,6 +53,8 @@ quiz-app/
 └── README.md
 ```
 
+## Application UI 
+
 ## Setup Instructions
 
 ### Prerequisites
