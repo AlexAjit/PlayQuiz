@@ -63,8 +63,8 @@ quiz-app/
 ### Steps to Run the Application
 1. Clone the repository:
    ```sh
-   git clone https://github.com/AlexAjit/quiz-app.git
-   cd quiz-app
+   git clone https://github.com/AlexAjit/PlayQuiz.git
+   cd PlayQuiz
    ```
 2. Build the application:
    ```sh
