@@ -13,6 +13,9 @@ RUN chmod +x mvnw
 # Build the project using Maven
 RUN ./mvnw clean package -DskipTests
 
+# Ensure the target directory exists
+RUN mkdir -p target
+
 # Copy the built JAR file into the container
 COPY target/*.jar app.jar
 
