@@ -104,10 +104,6 @@ Password: (leave empty)
 - **Spring Data JPA** (ORM)
 - **Thymeleaf** (For rendering HTML pages)
 - **HTML, CSS, JavaScript** (Frontend)
-
-## License
-This project is licensed under the MIT License. Feel free to contribute and modify as needed!
-
 ---
-**Author:** Ajit
+**By:** Ajit
 
