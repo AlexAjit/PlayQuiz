@@ -1,0 +1,247 @@
+:root {
+    --primary-green: #2d5a27;
+    --secondary-green: #1a4314;
+    --light-green: #3a7a33;
+    --accent-green: #4c9a43;
+    --dark-bg: #1a1a1a;
+    --darker-bg: #141414;
+    --card-bg: #242424;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --success-green: #2d5a27;
+    --error-red: #8b1f1f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.main-header {
+    background-color: var(--darker-bg);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: var(--accent-green);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-right {
+    color: var(--text-secondary);
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 20px;
+}
+
+.screen {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    border: 1px solid var(--primary-green);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Start Screen */
+#start-screen {
+    text-align: center;
+}
+
+#start-screen h2 {
+    color: var(--accent-green);
+    margin-bottom: 1rem;
+}
+
+#start-screen p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+/* Progress Bar */
+.progress-container {
+    margin-bottom: 25px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--secondary-green);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--accent-green);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+#progress-text {
+    text-align: right;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* Question Styles */
+#question-text {
+    margin-bottom: 20px;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+}
+
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.answer-option {
+    padding: 15px;
+    border: 1px solid var(--primary-green);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.answer-option:hover:not(.disabled) {
+    background-color: var(--primary-green);
+    border-color: var(--accent-green);
+}
+
+.answer-option.selected {
+    background-color: var(--primary-green);
+    border-color: var(--accent-green);
+}
+
+.answer-option.correct {
+    background-color: var(--success-green);
+    border-color: var(--accent-green);
+}
+
+.answer-option.incorrect {
+    background-color: var(--error-red);
+    border-color: #a33;
+}
+
+.answer-option.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* Navigation */
+#navigation {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Result Screen */
+#score-container {
+    background-color: var(--darker-bg);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border: 1px solid var(--primary-green);
+}
+
+#score-container p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--text-primary);
+}
+
+.question-result {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--darker-bg);
+    border: 1px solid var(--primary-green);
+}
+
+/* Button Styles */
+.button {
+    padding: 12px 24px;
+    background-color: var(--primary-green);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.button:hover:not(:disabled) {
+    background-color: var(--accent-green);
+}
+
+.button:disabled {
+    background-color: var(--secondary-green);
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .screen {
+        padding: 15px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #navigation {
+        flex-direction: column;
+    }
+
+    #navigation .button {
+        width: 100%;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+}

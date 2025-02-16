@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test your knowledge with this interactive quiz application.">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <script defer src="/js/app.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>Play with mind</h1>
+            </div>
+            <div class="nav-right">
+                <span class="user-score">Total Score: 0</span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="start-screen" class="screen">
+            <h2>Welcome to the Quiz!</h2>
+            <p>Test your knowledge with this multiple-choice quiz.</p>
+            <button id="start-button" class="button">Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="screen hidden">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                <div id="progress-text">Question 0/0</div>
+            </div>
+
+            <div id="question-container">
+                <h2 id="question-text">Question goes here</h2>
+                <div id="answers-container" class="answers-container">
+                    <!-- Answers will be added dynamically -->
+                </div>
+            </div>
+
+            <div id="navigation">
+                <button id="next-button" class="button" disabled>Next Question</button>
+                <button id="finish-button" class="button hidden">Finish Quiz</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+            <h2>Quiz Results</h2>
+            <div id="score-container">
+                <p>Total Questions: <span id="total-questions">0</span></p>
+                <p>Correct Answers: <span id="correct-answers">0</span></p>
+                <p>Incorrect Answers: <span id="incorrect-answers">0</span></p>
+                <p>Score: <span id="score-percentage">0%</span></p>
+            </div>
+
+            <h3>Question Details:</h3>
+            <div id="questions-summary">
+                <!-- Question details will be added dynamically -->
+            </div>
+            <button id="restart-button" class="button">Restart Quiz</button>
+        </div>
+    </div>
+</body>
+</html>
