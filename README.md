@@ -63,7 +63,7 @@ quiz-app/
 ### Steps to Run the Application
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/quiz-app.git
+   git clone https://github.com/AlexAjit/quiz-app.git
    cd quiz-app
    ```
 2. Build the application:
